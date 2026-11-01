@@ -5,46 +5,32 @@
 
 int main()
 {
-    int k, rub, kop;
-
-    setlocale(LC_ALL, "Russian");
-
-    printf("Ââåäèòå êîïåéêè: ");
-    scanf("%d", &k);
-
-    rub = k / 100;
-    kop = k % 100;
-
-    if (rub > 0)
-    {
-        printf("%d ", rub);
-        if (rub % 100 >= 11 && rub % 100 <= 14)
-            printf("ðóáëåé");
-        else if (rub % 10 == 1)
-            printf("ðóáëü");
-        else if (rub % 10 >= 2 && rub % 10 <= 4)
-            printf("ðóáëÿ");
-        else
-            printf("ðóáëåé");
+    setlocale(LC_CTYPE, "RUS");
+    double a, b, c;
+    printf("Ð¢Ñ€Ð¸ Ð²ÐµÑ‰ÐµÑÑ‚Ð²ÐµÐ½Ð½Ñ‹Ñ… Ñ‡Ð¸ÑÐ»Ð°\n");
+    scanf("%lf %lf %lf", &a, &b, &c);
+    if (a > -1 && a < 1) {
+        printf("%g\n", a);
     }
-
-    if (rub > 0 && kop > 0)
-        printf(" è ");
-
-    if (kop > 0)
-    {
-        printf("%d ", kop);
-        if (kop >= 11 && kop <= 14)
-            printf("êîïååê");
-        else if (kop % 10 == 1)
-            printf("êîïåéêà");
-        else if (kop % 10 >= 2 && kop % 10 <= 4)
-            printf("êîïåéêè");
-        else
-            printf("êîïååê");
+    else {
+        printf("Ð§Ð¸ÑÐ»Ð¾ Ð½Ðµ Ð¿Ñ€Ð¸Ð½Ð°Ð´Ð»ÐµÐ¶Ð¸Ñ‚ Ð¸Ð½Ñ‚ÐµÑ€Ð²Ð°Ð»Ñƒ (-1,1)\n");
     }
-
+    if (b > -1 && b < 1) {
+        printf("%g\n", b);
+    }
+    else {
+        printf("Ð§Ð¸ÑÐ»Ð¾ Ð½Ðµ Ð¿Ñ€Ð¸Ð½Ð°Ð´Ð»ÐµÐ¶Ð¸Ñ‚ Ð¸Ð½Ñ‚ÐµÑ€Ð²Ð°Ð»Ñƒ (-1,1)\n");
+    }
+    if (c > -1 && c < 1) {
+        printf("%g\n", c);
+    }
+    else {
+        printf("Ð§Ð¸ÑÐ»Ð¾ Ð½Ðµ Ð¿Ñ€Ð¸Ð½Ð°Ð´Ð»ÐµÐ¶Ð¸Ñ‚ Ð¸Ð½Ñ‚ÐµÑ€Ð²Ð°Ð»Ñƒ (-1,1)\n");
+    }
     printf("\n");
     return 0;
-    system("pause");
 }
+
+    
+    
+
